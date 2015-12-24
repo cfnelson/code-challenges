@@ -24,6 +24,7 @@ bool checkIfBalanced(string parens) {
   int strLen = parens.length();
 
   if ( (strLen % 2) != 0) return false;
+  
   for (int i = 0; i < strLen; ++i) 
   {
     if (myMap.find(parens[i]) != myMap.end() ) 
@@ -54,6 +55,7 @@ int main() {
   string test6 = "))";
   string test7 = "(([]))";
   string test8 = "(([";
+  
   cout << checkIfBalanced(test1) << endl;
   cout << checkIfBalanced(test2) << endl;
   cout << checkIfBalanced(test3) << endl;
@@ -62,6 +64,7 @@ int main() {
   cout << checkIfBalanced(test6) << endl;
   cout << checkIfBalanced(test7) << endl;
   cout << checkIfBalanced(test8) << endl;
+  
   return 0;
 }
 
