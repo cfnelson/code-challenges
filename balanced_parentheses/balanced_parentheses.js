@@ -20,10 +20,10 @@ function checkIfBalanced(strToCheck) {
   if ( (strToCheck.length % 2) !== 0) return false;
   
   for ( var i = 0; i < strToCheck.length; ++i ) {
-    if ( Object.keys(myMap).find(strToCheck[i]) !== undefined ) {
+    if ( Object.keys(myMap).indexOf(strToCheck[i]) !== -1 ) {
       stack.push(strToCheck[i]);
     }
-    // Object.values(myMap).find(strToCheck[i]) !== undefined  // ECMAscript 2016 (ES7) proposal 
+    // Object.values(myMap).indexOf(strToCheck[i]) !== -1  // ECMAscript 2016 (ES7) proposal 
     else if ( strToCheck[i] === ']' || strToCheck[i] === '}' || strToCheck[i] === ')' ) {
       if ( myMap[stack.pop()] !== strToCheck[i] ) return false; 
     } 
