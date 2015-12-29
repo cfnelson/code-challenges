@@ -31,3 +31,12 @@ function checkIfBalanced(strToCheck) {
   return stack.length === 0;
 }
 
+console.log(checkIfBalanced("[]{}()");
+console.log(checkIfBalanced("[({})]");
+console.log(checkIfBalanced("[(]{)}");
+console.log(checkIfBalanced("[(])");
+console.log(checkIfBalanced("((");
+console.log(checkIfBalanced("))");
+console.log(checkIfBalanced("(([]))");
+console.log(checkIfBalanced("(([");
+
