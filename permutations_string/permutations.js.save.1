@@ -1,0 +1,22 @@
+// Find all permutations of a string. 
+
+function swapChars (index1,index2, strToSwap) {
+  return strToSwap[index2] + strToSwap.slice(1,index2) + strToSwap[index1] + strToSwap.slice(index2);
+}
+
+function permutate(strPermutations, start, end) {
+  if ( start === end ) {
+g    console.log( strPermutations );
+    return; //- Return is here for extra clarity
+  } else {
+    for ( var i = start; i < strPermutations.length(); ++i ) {
+      strPermutations = swapChars( start, i, strPermutations);
+      permutate( strPermutations, start + 1, end );
+      strPermutations = swapChars( start, i, strPermutations);
+    }
+  }
+}
+
+permutate("abc",0,3);
+permutate("abcd",0,4);
+
